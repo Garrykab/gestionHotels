@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelBooking - Votre plateforme de réservation d'hôtels</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hotel text-primary"></i> HotelBooking
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotels.html">Hôtels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2" href="register.html">Inscription</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 text-white mb-4">Trouvez votre hôtel idéal</h1>
+                    <div class="search-box">
+                        <form class="row g-3">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="Destination">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" placeholder="Date d'arrivée">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" placeholder="Date de départ">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary w-100">Rechercher</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Hotels Section -->
+    <section class="popular-hotels py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 reveal">Hôtels Populaires</h2>
+            <div class="row">
+                <!-- Hotel Card 1 -->
+                <div class="col-md-4 mb-4 reveal-left">
+                    <div class="card hotel-card">
+                        <img src="images/hotel1.jpg" class="card-img-top" alt="Hôtel Luxe Paris">
+                        <div class="card-body">
+                            <h5 class="card-title">Hôtel Luxe Paris</h5>
+                            <p class="card-text">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </p>
+                            <p class="card-text">À partir de 200€ / nuit</p>
+                            <a href="details.html" class="btn btn-primary">Voir les détails</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hotel Card 2 -->
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="card hotel-card">
+                        <img src="images/hotel2.jpg" class="card-img-top" alt="Grand Hôtel">
+                        <div class="card-body">
+                            <h5 class="card-title">Grand Hôtel</h5>
+                            <p class="card-text">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </p>
+                            <p class="card-text">À partir de 150€ / nuit</p>
+                            <a href="details.html" class="btn btn-primary">Voir les détails</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hotel Card 3 -->
+                <div class="col-md-4 mb-4 reveal-right">
+                    <div class="card hotel-card">
+                        <img src="images/hotel3.jpg" class="card-img-top" alt="Hôtel Plage">
+                        <div class="card-body">
+                            <h5 class="card-title">Hôtel Plage</h5>
+                            <p class="card-text">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </p>
+                            <p class="card-text">À partir de 180€ / nuit</p>
+                            <a href="details.html" class="btn btn-primary">Voir les détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 reveal">Pourquoi nous choisir ?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 reveal-left">
+                    <div class="feature-card animate-fade-left">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Réservation Sécurisée</h4>
+                        <p>Paiement 100% sécurisé et confirmation instantanée de votre réservation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="feature-card animate-fade-up">
+                        <div class="feature-icon">
+                            <i class="fas fa-percent"></i>
+                        </div>
+                        <h4>Meilleurs Prix</h4>
+                        <p>Garantie du meilleur prix et réductions exclusives pour nos membres.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 reveal-right">
+                    <div class="feature-card animate-fade-right">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Support 24/7</h4>
+                        <p>Notre équipe est disponible 24h/24 et 7j/7 pour vous assister.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 reveal">
+                    <div class="stat-item animate-fade-up">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Hôtels</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 reveal" style="transition-delay: 0.2s">
+                    <div class="stat-item animate-fade-up">
+                        <div class="stat-number">50k+</div>
+                        <div class="stat-label">Clients Satisfaits</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 reveal" style="transition-delay: 0.4s">
+                    <div class="stat-item animate-fade-up">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Destinations</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 reveal" style="transition-delay: 0.6s">
+                    <div class="stat-item animate-fade-up">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Client</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 reveal">Ce que disent nos clients</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 reveal-left">
+                    <div class="testimonial-card animate-fade-left">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/hotel1.jpg" alt="Client" class="testimonial-avatar">
+                            <div>
+                                <h5 class="mb-0">Sophie Martin</h5>
+                                <small class="text-muted">Paris, France</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Service exceptionnel ! La réservation était simple et rapide. L'hôtel était exactement comme décrit."</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="testimonial-card animate-fade-up">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/hotel2.jpg" alt="Client" class="testimonial-avatar">
+                            <div>
+                                <h5 class="mb-0">Thomas Dubois</h5>
+                                <small class="text-muted">Lyon, France</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Les prix sont très compétitifs et le service client est au top. Je recommande vivement !"</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 reveal-right">
+                    <div class="testimonial-card animate-fade-right">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/hotel3.jpg" alt="Client" class="testimonial-avatar">
+                            <div>
+                                <h5 class="mb-0">Marie Laurent</h5>
+                                <small class="text-muted">Nice, France</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Une expérience parfaite du début à la fin. Je reviendrai certainement pour mes prochains voyages."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-4 reveal">Restez informé de nos offres</h2>
+                    <p class="mb-4 reveal">Inscrivez-vous à notre newsletter pour recevoir nos meilleures offres et promotions.</p>
+                    <form class="newsletter-form reveal">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Votre adresse email">
+                            <button class="btn btn-primary" type="submit">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4 reveal">Types d'hébergement</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4 reveal-left">
+                    <div class="category-card text-center p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-hotel fa-3x text-primary mb-3"></i>
+                        <h4>Hôtels</h4>
+                        <p>Hôtels de luxe et confortables</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 reveal" style="transition-delay: 0.2s">
+                    <div class="category-card text-center p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-home fa-3x text-primary mb-3"></i>
+                        <h4>Appartements</h4>
+                        <p>Locations de vacances</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 reveal" style="transition-delay: 0.4s">
+                    <div class="category-card text-center p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-umbrella-beach fa-3x text-primary mb-3"></i>
+                        <h4>Resorts</h4>
+                        <p>Complexes vacances tout inclus</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 reveal-right">
+                    <div class="category-card text-center p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-campground fa-3x text-primary mb-3"></i>
+                        <h4>Chalets</h4>
+                        <p>Hébergements montagne</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>À propos</h5>
+                    <p>HotelBooking est votre plateforme de confiance pour réserver votre hébergement idéal.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Accueil</a></li>
+                        <li><a href="hotels.html" class="text-white">Hôtels</a></li>
+                        <li><a href="dashboard.html" class="text-white">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li><i class="fas fa-envelope"></i> contact@hotelbooking.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 HotelBooking. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

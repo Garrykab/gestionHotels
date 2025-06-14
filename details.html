@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de l'Hôtel - HotelBooking</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-img {
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .main-img {
+            height: 400px;
+            object-fit: cover;
+        }
+        .room-card {
+            transition: transform 0.3s ease;
+        }
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+        .review-card {
+            border-left: 4px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hotel text-primary"></i> HotelBooking
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotels.html">Hôtels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 pt-4">
+        <!-- Hotel Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="mb-2">Hôtel Luxe Paris</h1>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="me-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <span class="text-muted">5.0 (128 avis)</span>
+                </div>
+                <p class="mb-0">
+                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                    123 Avenue des Champs-Élysées, 75008 Paris, France
+                </p>
+            </div>
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="row mb-4">
+            <div class="col-md-8 mb-3">
+                <img src="images/hotel1.jpg" class="img-fluid rounded main-img" alt="Hotel Main Image">
+            </div>
+            <div class="col-md-4">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <img src="images/hotel2.jpg" class="img-fluid rounded gallery-img" alt="Hotel Room">
+                    </div>
+                    <div class="col-6">
+                        <img src="images/hotel3.jpg" class="img-fluid rounded gallery-img" alt="Hotel Pool">
+                    </div>
+                    <div class="col-6">
+                        <img src="images/hotel1.jpg" class="img-fluid rounded gallery-img" alt="Hotel Restaurant">
+                    </div>
+                    <div class="col-6">
+                        <img src="images/hotel2.jpg" class="img-fluid rounded gallery-img" alt="Hotel Spa">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hotel Details -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">À propos de l'hôtel</h3>
+                        <p class="card-text">
+                            Situé au cœur de Paris, l'Hôtel Luxe Paris offre un hébergement de luxe avec vue panoramique sur la ville. 
+                            Notre établissement 5 étoiles propose des chambres élégantes, un spa de renommée mondiale, 
+                            et plusieurs restaurants gastronomiques.
+                        </p>
+                        <h5 class="mt-4 mb-3">Équipements</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-wifi text-primary me-2"></i> Wi-Fi gratuit</li>
+                                    <li><i class="fas fa-swimming-pool text-primary me-2"></i> Piscine</li>
+                                    <li><i class="fas fa-spa text-primary me-2"></i> Spa</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-utensils text-primary me-2"></i> Restaurant</li>
+                                    <li><i class="fas fa-dumbbell text-primary me-2"></i> Salle de sport</li>
+                                    <li><i class="fas fa-parking text-primary me-2"></i> Parking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rooms Section -->
+                <h3 class="mb-4">Chambres disponibles</h3>
+                <div class="row">
+                    <!-- Room 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card room-card h-100">
+                            <img src="images/hotel1.jpg" class="card-img-top" alt="Deluxe Room">
+                            <div class="card-body">
+                                <h5 class="card-title">Chambre Deluxe</h5>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <i class="fas fa-bed me-2"></i>1 lit king-size
+                                        <i class="fas fa-user me-2 ms-3"></i>2 personnes
+                                    </small>
+                                </p>
+                                <p class="card-text">Chambre spacieuse avec vue sur la ville</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">200€ / nuit</span>
+                                    <button class="btn btn-primary">Réserver</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Room 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card room-card h-100">
+                            <img src="images/hotel2.jpg" class="card-img-top" alt="Suite">
+                            <div class="card-body">
+                                <h5 class="card-title">Suite Executive</h5>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <i class="fas fa-bed me-2"></i>1 lit king-size
+                                        <i class="fas fa-user me-2 ms-3"></i>2 personnes
+                                    </small>
+                                </p>
+                                <p class="card-text">Suite luxueuse avec salon privé</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">350€ / nuit</span>
+                                    <button class="btn btn-primary">Réserver</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <!-- Booking Widget -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Réserver maintenant</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Dates</label>
+                                <div class="input-group">
+                                    <input type="date" class="form-control" placeholder="Arrivée">
+                                    <input type="date" class="form-control" placeholder="Départ">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Voyageurs</label>
+                                <select class="form-select">
+                                    <option>1 adulte</option>
+                                    <option>2 adultes</option>
+                                    <option>2 adultes, 1 enfant</option>
+                                    <option>2 adultes, 2 enfants</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Vérifier la disponibilité</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Informations de contact</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-phone text-primary me-2"></i>
+                                +33 1 23 45 67 89
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope text-primary me-2"></i>
+                                contact@hotelluxeparis.com
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                123 Avenue des Champs-Élysées<br>
+                                75008 Paris, France
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="mb-4">Avis clients</h3>
+                <!-- Review 1 -->
+                <div class="card review-card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h5 class="card-title mb-0">Jean Dupont</h5>
+                                <small class="text-muted">Séjour en décembre 2023</small>
+                            </div>
+                            <div>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <p class="card-text">
+                            Excellent séjour ! Le personnel est très attentionné, les chambres sont magnifiques 
+                            et le service est impeccable. Je recommande vivement cet hôtel.
+                        </p>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="card review-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h5 class="card-title mb-0">Marie Martin</h5>
+                                <small class="text-muted">Séjour en novembre 2023</small>
+                            </div>
+                            <div>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <p class="card-text">
+                            Très bel hôtel avec un excellent rapport qualité-prix. La vue depuis la chambre 
+                            était spectaculaire. Seul petit bémol : le temps d'attente un peu long au restaurant.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>À propos</h5>
+                    <p>HotelBooking est votre plateforme de confiance pour réserver votre hébergement idéal.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Accueil</a></li>
+                        <li><a href="hotels.html" class="text-white">Hôtels</a></li>
+                        <li><a href="dashboard.html" class="text-white">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li><i class="fas fa-envelope"></i> contact@hotelbooking.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 HotelBooking. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
